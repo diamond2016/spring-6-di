@@ -5,12 +5,14 @@ import guru.springframework.spring6di.services.GreetingService;
 /**
  * Created by jt, Spring Framework Guru.
  */
-public class PropertyInjectedController {
+public class SetterInjectedController {
+    private GreetingService greetingService;
 
-    GreetingService greetingService;
+    public void setGreetingService(GreetingService greetingService) {
+        this.greetingService = greetingService;
+    }
 
     public String sayHello(){
         return greetingService.sayGreeting();
     }
-
 }
