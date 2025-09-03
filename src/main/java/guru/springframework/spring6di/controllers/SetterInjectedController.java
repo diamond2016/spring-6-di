@@ -11,9 +11,10 @@ import guru.springframework.spring6di.services.GreetingService;
 
  @Controller
 public class SetterInjectedController {
-    @Autowired // not recommmanded, user constructor
+   
     private GreetingService greetingService;
-
+    
+    @Autowired // not recommmanded, user constructor
     public void setGreetingService(GreetingService greetingService) {
         this.greetingService = greetingService;
     }
