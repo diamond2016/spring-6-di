@@ -1,6 +1,7 @@
 package guru.springframework.spring6di.controllers;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Controller;
 
 import guru.springframework.spring6di.services.GreetingService;
@@ -14,7 +15,8 @@ public class SetterInjectedController {
    
     private GreetingService greetingService;
     
-    @Autowired // not recommmanded, user constructor
+    @Qualifier("setterGreetingBean")
+    @Autowired
     public void setGreetingService(GreetingService greetingService) {
         this.greetingService = greetingService;
     }

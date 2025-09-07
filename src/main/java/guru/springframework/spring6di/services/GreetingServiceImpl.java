@@ -1,5 +1,6 @@
 package guru.springframework.spring6di.services;
 
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
 
 /**
@@ -7,6 +8,7 @@ import org.springframework.stereotype.Service;
  */
 
 @Service
+@Qualifier("greetingServiceImpl")
 public class GreetingServiceImpl implements GreetingService {
     @Override
     public String sayGreeting() {
