@@ -4,7 +4,7 @@ import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Service;
 
 @Profile("UAT")
-@Service("dataSourceService")
+@Service
 public class DataSourceServiceImplUAT implements DataSourceService {
 
     private final String dataSource = "jdbc:h2:localhost:2023/UserDB  - UAT";

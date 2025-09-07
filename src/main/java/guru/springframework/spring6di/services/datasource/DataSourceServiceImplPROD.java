@@ -4,7 +4,7 @@ import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Service;
 
 @Profile("PROD")
-@Service("dataSourceService")
+@Service
 public class DataSourceServiceImplPROD implements DataSourceService {
 
     private final String dataSource = "jdbc:h2:localhost:3020/UserDB - PROD";

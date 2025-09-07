@@ -1,6 +1,5 @@
 package guru.springframework.spring6di.controllers.datasource;
 
-import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Controller;
 
 import guru.springframework.spring6di.services.datasource.DataSourceService;
@@ -12,7 +11,7 @@ import guru.springframework.spring6di.services.datasource.DataSourceService;
 public class DataSourceController {
     private final DataSourceService dataSourceservice;
 
-    public DataSourceController(@Qualifier("dataSourceService")  DataSourceService dataSourceService) {
+    public DataSourceController(DataSourceService dataSourceService) {
         this.dataSourceservice = dataSourceService;
     }
 
