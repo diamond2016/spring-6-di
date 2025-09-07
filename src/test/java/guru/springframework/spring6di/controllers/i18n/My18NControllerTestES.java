@@ -1,19 +1,18 @@
-package guru.springframework.spring6di.controllers;
+package guru.springframework.spring6di.controllers.i18n;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
-
 @SpringBootTest
-class ConstructorInjectedControllerTest {
+public class My18NControllerTestES {
 
     @Autowired
-    ConstructorInjectedController controller;
-
+    My18NController my18NController;
+    
     @Test
     void sayHello() {
-        System.out.println(controller.sayHello());
-
+        System.out.println(my18NController.sayHello());
     }
 }
+
